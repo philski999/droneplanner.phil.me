@@ -15,14 +15,12 @@ public class Planner {
     public static void main(String[] args) throws IOException {
         // Build the Solver
         SolverFactory solverFactory = SolverFactory.createFromXmlResource(
-                "me/phil/activityplanner/solverConfig.xml");
+                "me/phil/droneplanner/solverConfig.xml");
         Solver solver = solverFactory.buildSolver();
 
         Plan unsolvedPlan = null;
-		try (InputStream availabilityStream = Planner.class.getResourceAsStream("activityplanner-availability.csv");
-			 InputStream targetsStream = Planner.class.getResourceAsStream("activityplanner-targets.csv")) {
-			unsolvedPlan = PlanningProblemReader.newPlanFromCSV(new InputStreamReader(targetsStream), 
-					new InputStreamReader(availabilityStream));
+		try (InputStream problemStream = Planner.class.getResourceAsStream("activityplanner-problem.csv")) {
+			unsolvedPlan = PlanningProblemReader.newPlanFromCSV(new InputStreamReader(problemStream));
 		}        
        
 		System.out.println("Problem loaded, solving...");

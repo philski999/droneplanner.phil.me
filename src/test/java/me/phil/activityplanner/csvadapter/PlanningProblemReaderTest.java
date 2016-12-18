@@ -17,10 +17,8 @@ public class PlanningProblemReaderTest {
 
 	@Test
 	public void testNewPlanFromCSVFile() throws IOException {
-		try (InputStream availabilityStream = getClass().getResourceAsStream("activityplanner-availability.csv");
-			 InputStream targetsStream = getClass().getResourceAsStream("activityplanner-targets.csv")) {
-			Plan plan = PlanningProblemReader.newPlanFromCSV(new InputStreamReader(targetsStream), 
-					new InputStreamReader(availabilityStream));
+		try (InputStream problemStream = getClass().getResourceAsStream("droneplanner-problem.csv")) {
+			Plan plan = PlanningProblemReader.newPlanFromCSV(new InputStreamReader(problemStream));
 			
 			assertThat("Plan contains availability", plan.getAssignmentDays().size(), is(greaterThan(0)));
 			assertThat("Plan contains targets", plan.getActivities().size(), is(greaterThan(0)));
