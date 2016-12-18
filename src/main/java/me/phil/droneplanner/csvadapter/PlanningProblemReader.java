@@ -1,4 +1,4 @@
-package me.phil.activityplanner.csvadapter;
+package me.phil.droneplanner.csvadapter;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -11,10 +11,10 @@ import org.apache.commons.csv.CSVRecord;
 
 import com.google.common.collect.Lists;
 
-import me.phil.activityplanner.domain.Activity;
-import me.phil.activityplanner.domain.Assignment;
-import me.phil.activityplanner.domain.Day;
-import me.phil.activityplanner.domain.Plan;
+import me.phil.droneplanner.domain.Activity;
+import me.phil.droneplanner.domain.Assignment;
+import me.phil.droneplanner.domain.Day;
+import me.phil.droneplanner.domain.Plan;
 
 
 public class PlanningProblemReader {

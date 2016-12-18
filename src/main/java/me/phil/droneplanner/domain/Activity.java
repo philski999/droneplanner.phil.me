@@ -1,4 +1,4 @@
-package me.phil.activityplanner.domain;
+package me.phil.droneplanner.domain;
 
 /**
  * Something that you want to assign effort to.

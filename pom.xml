@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>phil.me</groupId>
-	<artifactId>activityplanner.phil.me</artifactId>
+	<artifactId>droneplanner.phil.me</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Activity Planner</name>
-	<description>Assigns activities to activity slots</description>
+	<name>Drone Planner</name>
+	<description>Plans deliveries by drone, Google Hashcode 2016</description>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

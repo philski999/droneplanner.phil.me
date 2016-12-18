@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import me.phil.activityplanner.domain.Plan;
+
+import me.phil.droneplanner.csvadapter.PlanningProblemReader;
+import me.phil.droneplanner.domain.Plan;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package me.phil.activityplanner;
+package me.phil.droneplanner;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
 import org.optaplanner.core.api.solver.Solver;
 import org.optaplanner.core.api.solver.SolverFactory;
 
-import me.phil.activityplanner.csvadapter.PlanningProblemReader;
-import me.phil.activityplanner.csvadapter.PlanningProblemWriter;
-import me.phil.activityplanner.domain.Plan;
+import me.phil.droneplanner.csvadapter.PlanningProblemReader;
+import me.phil.droneplanner.csvadapter.PlanningProblemWriter;
+import me.phil.droneplanner.domain.Plan;
 
 public class Planner {
     public static void main(String[] args) throws IOException {

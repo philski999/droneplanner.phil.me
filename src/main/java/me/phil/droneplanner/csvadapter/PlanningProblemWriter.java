@@ -1,13 +1,13 @@
-package me.phil.activityplanner.csvadapter;
+package me.phil.droneplanner.csvadapter;
 
 import java.io.IOException;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 
-import me.phil.activityplanner.domain.Assignment;
-import me.phil.activityplanner.domain.Day;
-import me.phil.activityplanner.domain.Plan;
+import me.phil.droneplanner.domain.Assignment;
+import me.phil.droneplanner.domain.Day;
+import me.phil.droneplanner.domain.Plan;
 
 public class PlanningProblemWriter {
 	public static void print(Plan plan, Appendable output) throws IOException {
