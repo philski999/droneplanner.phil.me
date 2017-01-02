@@ -9,7 +9,7 @@ public class DeliveryPlan {
 		return new DeliveryPlan();
 	}
 
-	private DeliveryMap deliveryMap = DeliveryMap.newInstance(10, 10);
+	private DeliveryMap deliveryMap = DeliveryMap.newInstance();
 	private List<Drone> drones = Lists.newArrayList();
 	private List<Order> orders = Lists.newArrayList();
 	private List<Warehouse> warehouses = Lists.newArrayList();

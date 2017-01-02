@@ -5,6 +5,10 @@ public class DeliveryMap {
 		return new DeliveryMap(rows, columns);
 	}
 	
+	public static DeliveryMap newInstance() {
+		return newInstance(10, 10);
+	}
+	
 	private int rows;
 	private int columns;
 	
