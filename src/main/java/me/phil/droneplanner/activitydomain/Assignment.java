@@ -1,4 +1,4 @@
-package me.phil.droneplanner.domain;
+package me.phil.droneplanner.activitydomain;
 
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;

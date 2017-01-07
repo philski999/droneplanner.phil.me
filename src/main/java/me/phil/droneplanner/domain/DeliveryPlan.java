@@ -41,4 +41,8 @@ public class DeliveryPlan implements Solution<HardSoftScore> {
 		
 		return facts;
 	}
+	
+	public Collection<Order> getOrders() {
+		return orders;
+	}
 }

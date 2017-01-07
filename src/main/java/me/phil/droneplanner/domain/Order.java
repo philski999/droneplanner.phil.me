@@ -19,6 +19,14 @@ public class Order {
 			this.orderItems.put(e.getKey(), new Integer(e.getValue()));
 		}
 	}
+
+	// 
+	public int getScore() {
+		// TODO
+		// Should return a positive value if the order has been fulfilled.
+		// Higher scores are given for earlier fulfilment
+		return 0;
+	}
 }
 
 

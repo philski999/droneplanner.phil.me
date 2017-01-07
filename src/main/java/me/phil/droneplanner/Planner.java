@@ -8,7 +8,6 @@ import org.optaplanner.core.api.solver.Solver;
 import org.optaplanner.core.api.solver.SolverFactory;
 
 import me.phil.droneplanner.domain.DeliveryPlan;
-import me.phil.droneplanner.domain.Plan;
 import me.phil.droneplanner.textadapter.PlanningProblemReader;
 import me.phil.droneplanner.textadapter.PlanningProblemWriter;
 
@@ -28,7 +27,7 @@ public class Planner {
 		
         // Solve the problem
         solver.solve(unsolvedPlan);
-        Plan solvedPlan = (Plan) solver.getBestSolution();
+        DeliveryPlan solvedPlan = (DeliveryPlan) solver.getBestSolution();
         
         System.out.println("Final score = " + solvedPlan.getScore());
 

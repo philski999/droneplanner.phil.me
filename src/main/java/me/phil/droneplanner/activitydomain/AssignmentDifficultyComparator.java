@@ -1,4 +1,4 @@
-package me.phil.droneplanner.domain;
+package me.phil.droneplanner.activitydomain;
 
 import java.util.Comparator;
 

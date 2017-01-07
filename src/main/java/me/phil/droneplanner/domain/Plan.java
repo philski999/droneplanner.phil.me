@@ -4,6 +4,10 @@ import java.time.LocalDate;
 import java.util.Collection;
 import java.util.List;
 
+import me.phil.droneplanner.activitydomain.Activity;
+import me.phil.droneplanner.activitydomain.Assignment;
+import me.phil.droneplanner.activitydomain.Day;
+
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
 import org.optaplanner.core.api.domain.solution.Solution;
@@ -12,7 +16,7 @@ import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
 
 import com.google.common.collect.Lists;
 
-@PlanningSolution
+//@PlanningSolution
 public class Plan implements Solution<HardSoftScore> {
 
 	private List<Activity> activity;
