@@ -7,9 +7,10 @@ import java.io.InputStreamReader;
 import org.optaplanner.core.api.solver.Solver;
 import org.optaplanner.core.api.solver.SolverFactory;
 
-import me.phil.droneplanner.csvadapter.PlanningProblemReader;
-import me.phil.droneplanner.csvadapter.PlanningProblemWriter;
+import me.phil.droneplanner.domain.DeliveryPlan;
 import me.phil.droneplanner.domain.Plan;
+import me.phil.droneplanner.textadapter.PlanningProblemReader;
+import me.phil.droneplanner.textadapter.PlanningProblemWriter;
 
 public class Planner {
     public static void main(String[] args) throws IOException {
@@ -18,9 +19,9 @@ public class Planner {
                 "me/phil/droneplanner/solverConfig.xml");
         Solver solver = solverFactory.buildSolver();
 
-        Plan unsolvedPlan = null;
-		try (InputStream problemStream = Planner.class.getResourceAsStream("activityplanner-problem.csv")) {
-			unsolvedPlan = PlanningProblemReader.newPlanFromCSV(new InputStreamReader(problemStream));
+        DeliveryPlan unsolvedPlan = null;
+		try (InputStream problemStream = Planner.class.getResourceAsStream("droneplanner-problem.txt")) {
+			unsolvedPlan = PlanningProblemReader.newPlanFromStream(new InputStreamReader(problemStream));
 		}        
        
 		System.out.println("Problem loaded, solving...");

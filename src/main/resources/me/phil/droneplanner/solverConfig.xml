@@ -6,8 +6,8 @@
   <!-- Score configuration -->
   <scoreDirectorFactory>
     <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
-    <!--  <easyScoreCalculatorClass>me.phil.activityplanner.domain.ScoreCalculator</easyScoreCalculatorClass> -->
-    <scoreDrl>me/phil/activityplanner/planningRules.drl</scoreDrl>
+    <!--  <easyScoreCalculatorClass>me.phil.droneplanner.domain.ScoreCalculator</easyScoreCalculatorClass> -->
+    <scoreDrl>me/phil/droneplanner/planningRules.drl</scoreDrl>
     <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
   </scoreDirectorFactory>
 

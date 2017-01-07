@@ -1,4 +1,4 @@
-package me.phil.droneplanner.csvadapter;
+package me.phil.droneplanner.textadapter;
 
 import java.io.IOException;
 
