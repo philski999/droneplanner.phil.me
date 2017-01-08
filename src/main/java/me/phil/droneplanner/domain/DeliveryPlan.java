@@ -3,8 +3,10 @@ package me.phil.droneplanner.domain;
 import java.util.Collection;
 import java.util.List;
 
+import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
 import org.optaplanner.core.api.domain.solution.Solution;
+import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider;
 import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
 
 import com.google.common.collect.Lists;
@@ -42,7 +44,19 @@ public class DeliveryPlan implements Solution<HardSoftScore> {
 		return facts;
 	}
 	
+	@ValueRangeProvider(id = "orders")
 	public Collection<Order> getOrders() {
 		return orders;
+	}
+	
+	@PlanningEntityCollectionProperty
+	public Collection<Item> getItems() {
+		List<Item> items = Lists.newArrayList();
+		
+		for (Warehouse warehouse : warehouses) {
+			items.addAll(warehouse.itemsInWarehouse());
+		}
+		
+		return items;
 	}
 }

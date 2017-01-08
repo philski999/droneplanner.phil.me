@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <solver>
   <!-- Domain model configuration -->
-  <scanAnnotatedClasses/>
+  <scanAnnotatedClasses>
+  	<packageInclude>me.phil.droneplanner.domain</packageInclude>
+  </scanAnnotatedClasses>
 
   <!-- Score configuration -->
   <scoreDirectorFactory>
     <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
-    <!--  <easyScoreCalculatorClass>me.phil.droneplanner.domain.ScoreCalculator</easyScoreCalculatorClass> -->
-    <scoreDrl>me/phil/droneplanner/planningRules.drl</scoreDrl>
+    <easyScoreCalculatorClass>me.phil.droneplanner.domain.ScoreCalculator</easyScoreCalculatorClass>
+    <!--  <scoreDrl>me/phil/droneplanner/dronePlanningRules.drl</scoreDrl> -->
     <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
   </scoreDirectorFactory>
 

@@ -1,0 +1,10 @@
+package me.phil.droneplanner;
+    dialect "java"
+
+import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder;
+import me.phil.droneplanner.domain.Item;
+import me.phil.droneplanner.domain.Order;
+
+global HardSoftScoreHolder scoreHolder;
+
+// TODO Not sure what I want to do here
